@@ -450,7 +450,7 @@ h3{
     &::after, &::before{
         position: absolute;
         content: '';
-        background-color: $bgc-color;
+        background-image: $yellow-gradient;
         width: 40%;
         height: 100%;
         position: absolute;
@@ -458,9 +458,7 @@ h3{
         
         transform: skew(50deg);
     }
-    &::before{
-        right: -50%;
-    }
+
 
     &__item{
         position: relative;
