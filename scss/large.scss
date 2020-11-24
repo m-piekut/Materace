@@ -1,0 +1,24 @@
+//992
+
+h3{
+    margin-bottom: 30px;
+}
+.products{
+    &__cards{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__card{
+        width: 45%;
+    }
+}
+
+
+
+
+
+
+
+
