@@ -1,5 +1,5 @@
 $main-color: #fac402;
-$bgc-color: #fff;
+$bgc-color: #f5f7fa;
 $yellow-gradient: linear-gradient(315deg, #fbaf3486 0%, #ffdd00ab 74%);
 $card-gradient: linear-gradient(45deg, #3333338e, #33333379);
 
@@ -15,19 +15,18 @@ $card-gradient: linear-gradient(45deg, #3333338e, #33333379);
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    background-color: $bgc-color;
 }
 
 body {
     font-family: 'Texturina', serif;
     font-size: 1.6rem;
+    background-color: $bgc-color;
 }
 
 .section{
     margin: 10px auto;
     width: 90%;
     margin-top: 3%;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,13 +118,14 @@ body {
         color: $main-color;
 
         &::after {
+            z-index: 10;
             content: '';
             position: absolute;
             left: 50%;
             bottom: 0;
             height: 3px;
             // width: 15%;
-            background-color: $main-color;
+            background-image: $main-color;
         }
 
         &:hover::after {
@@ -155,7 +155,7 @@ body {
 
     &::after{
         content: '';
-        background-color: $bgc-color;
+        background: #f5f7fa;
         width: 100%;
         height: 7%;
         position: absolute;
@@ -239,7 +239,9 @@ h3{
         display: flex;
         flex-direction: column;
     }
-
+    h3{
+        margin-bottom: 35px;
+    }
     &__card{
         padding: 30px 0 10px;
         position: relative;
@@ -247,12 +249,15 @@ h3{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        min-height: 450px;
+        min-height: 550px;
         background-size: cover;
-        margin: 10px 0;
+        background-position: bottom;
+        margin: 20px 0;
         color: white;
-        border-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         overflow: hidden;
+
 
         &--sL3{
             background-image: $card-gradient ,url('../img/syriusz_l3_zl.png');
@@ -264,6 +269,7 @@ h3{
             background-image: $card-gradient ,url('../img/syriusz_l3_kokos.png');
         }
         &--sP4zL{
+            background-position-y: 20px;
             background-image: $card-gradient ,url('../img/syriusz_p4_zl.png');
         }
         &--orion{
@@ -363,9 +369,14 @@ h3{
                 padding: 3px 5px;
             }
         }
+        &-downSection{
+            width: 80%;
+        }
         &-buy{
             position: relative;
             display: block;
+            max-width: 130px;
+            margin: 0 auto;
             font-size: 1.8rem;
             border: 1px solid $main-color;
             border-radius: 10px;
@@ -398,7 +409,7 @@ h3{
         position: absolute;
         height: 16px;
         width: 40%;
-        background-color: #fff;
+        background-image: #fff;
         transform: skew(-30deg);
     }
     &::before{
