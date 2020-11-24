@@ -407,9 +407,9 @@ h3{
     &::before, &::after{
         content: '';
         position: absolute;
-        height: 16px;
+        height: 25px;
         width: 40%;
-        background-image: #fff;
+        background-image: $yellow-gradient;
         transform: skew(-30deg);
     }
     &::before{

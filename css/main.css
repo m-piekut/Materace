@@ -403,9 +403,9 @@ h3::after {
 .infos::before, .infos::after {
   content: '';
   position: absolute;
-  height: 16px;
+  height: 25px;
   width: 40%;
-  background-image: #fff;
+  background-image: linear-gradient(315deg, #fbaf3486 0%, #ffdd00ab 74%);
   transform: skew(-30deg);
 }
 
