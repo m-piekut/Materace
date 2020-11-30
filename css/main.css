@@ -88,7 +88,9 @@ body {
   width: 100vw;
   height: 100vh;
   transition: left .4s;
-  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+  background-image: url("../img/pillows.png");
+  background-size: cover;
+  background-position-x: 20%;
 }
 
 .nav__items {
@@ -97,6 +99,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  background-color: #fff;
 }
 
 .nav__item {
@@ -117,7 +120,7 @@ body {
   left: 50%;
   bottom: 0;
   height: 3px;
-  background-image: #fac402;
+  background: #fac402;
 }
 
 .nav__item:hover::after {
@@ -129,7 +132,6 @@ body {
 }
 
 .heroimg {
-  z-index: -10;
   position: relative;
   height: 95vh;
   width: 100vw;
@@ -141,6 +143,7 @@ body {
 }
 
 .heroimg::after {
+  z-index: 10;
   content: '';
   background: #f5f7fa;
   width: 100%;
@@ -152,17 +155,19 @@ body {
 }
 
 .heroimg__bgc {
+  z-index: 10;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fbb034;
-  background-image: linear-gradient(315deg, #fbaf3486 0%, #ffdd00ab 74%);
+  background-color: #ccccc7b3;
   opacity: .7;
 }
 
 .heroimg__text {
+  color: white;
+  z-index: 11;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -243,12 +248,24 @@ h3::after {
   background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_l3_zl.png");
 }
 
+.products__card--sL3 .products__card-title {
+  background-image: url("../img/syriusz_l3-zl zew.png");
+}
+
 .products__card--sP3zL {
   background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_p3_zl.png");
 }
 
+.products__card--sP3zL .products__card-title {
+  background-image: url("../img/syriusz-p3 zew.png");
+}
+
 .products__card--sL3zLK {
   background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_l3_kokos.png");
+}
+
+.products__card--sL3zLK .products__card-title {
+  background-image: url("../img/syriusz_l3-zl-kokos zew.png");
 }
 
 .products__card--sP4zL {
@@ -256,8 +273,16 @@ h3::after {
   background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_p4_zl.png");
 }
 
+.products__card--sP4zL .products__card-title {
+  background-image: url("../img/syriusz_p4_lz zew.png");
+}
+
 .products__card--orion {
   background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/Orionhrzl.png");
+}
+
+.products__card--orion .products__card-title {
+  background-image: url("../img/orion_zewnatrz.png");
 }
 
 .products__card::after, .products__card::before {
@@ -327,7 +352,6 @@ h3::after {
 
 .products__card-title {
   font-size: 2.4rem;
-  background-image: url("/img/orion_zewnatrz.png");
   position: absolute;
   width: 100%;
   height: 50%;
@@ -378,17 +402,21 @@ h3::after {
 }
 
 .products__card-downSection {
-  width: 80%;
+  margin: 0 auto;
   position: absolute;
   bottom: 5%;
 }
 
+.products__card-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
 .products__card-buy {
   position: relative;
-  display: block;
-  max-width: 130px;
+  display: inline-block;
   margin: 0 auto;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   border: 1px solid #fac402;
   border-radius: 10px;
   margin-top: 10px;
@@ -398,7 +426,7 @@ h3::after {
   text-transform: uppercase;
   background-color: #3333334d;
   font-weight: bold;
-  transition: .3s;
+  transition: background .3s, color .3s;
   z-index: 10;
 }
 
@@ -461,7 +489,7 @@ h3::after {
   overflow: hidden;
 }
 
-.footer::after, .footer::before {
+.footer::after {
   position: absolute;
   content: '';
   background-image: linear-gradient(315deg, #fbaf3486 0%, #ffdd00ab 74%);

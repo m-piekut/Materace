@@ -6,3 +6,11 @@
     }
 }
 
+.products{
+    &__card{
+
+        &-downSection{
+            width: 80%;
+        }
+    }
+}
