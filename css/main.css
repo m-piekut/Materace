@@ -20,6 +20,7 @@ body {
 .section {
   margin: 10px auto;
   width: 90%;
+  max-width: 1400px;
   margin-top: 3%;
   display: flex;
   flex-direction: column;
@@ -223,11 +224,10 @@ h3::after {
 }
 
 .products__card {
-  padding: 30px 0 10px;
+  padding: 0px 0 10px;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   min-height: 550px;
   background-size: cover;
@@ -288,6 +288,10 @@ h3::after {
   opacity: 1;
 }
 
+.products__card:hover .products__card-title {
+  height: 0;
+}
+
 .products__card:hover .products__card-info-item {
   position: relative;
   top: 1000px;
@@ -323,6 +327,13 @@ h3::after {
 
 .products__card-title {
   font-size: 2.4rem;
+  background-image: url("/img/orion_zewnatrz.png");
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-size: 100% 100%;
+  background-position: bottom left;
+  transition: height .3s;
 }
 
 .products__card-arrow {
@@ -335,6 +346,9 @@ h3::after {
 }
 
 .products__card-info {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
   opacity: 0;
   padding: 0 10px;
   overflow: hidden;
@@ -365,6 +379,8 @@ h3::after {
 
 .products__card-downSection {
   width: 80%;
+  position: absolute;
+  bottom: 5%;
 }
 
 .products__card-buy {
@@ -406,7 +422,7 @@ h3::after {
   height: 25px;
   width: 40%;
   background-image: linear-gradient(315deg, #fbaf3486 0%, #ffdd00ab 74%);
-  transform: skew(-30deg);
+  transform: skew(50deg);
 }
 
 .infos::before {
