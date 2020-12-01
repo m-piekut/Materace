@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
     
 }
 
@@ -150,12 +151,13 @@ body {
 .heroimg {
     position: relative;
     height: 95vh;
-    width: 100vw;
+    width: 100%;
     background-image: url('../img/sleep-large.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    overflow: hidden;
 
     &::after{
         z-index: 10;
@@ -196,14 +198,52 @@ body {
     }
 
     &__logo {
-        height: 40px;
-        width: 100px;
-        background-color: #333;
+        position: relative;
+        perspective: 800px;
+        width: 300px;
+        height: 200px;
         margin-bottom: 20px;
+
+        &:hover{
+            .heroimg__logo-back{
+                transform: rotate(0);
+                opacity: 1;
+            }
+            .heroimg__logo-front{
+                transform: rotateY(-180deg);
+                opacity: 0;
+            }
+        }
+        &-front, &-back{
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &-front{
+            background-image: url('../img/logo_front.png');
+            transition: .8s;
+        }
+        &-back{
+            background-image: url('../img/logo_back.png');
+            opacity: 0;
+            transform: rotateY(180deg);
+            transition:  .8s
+        }
+
     }
     &__title{
         text-transform: uppercase;
         margin-bottom: 5px;
+    }
+    &__p{
+        font-size: 1.6rem;
+        text-shadow: 2px 2px black;
+        font-weight: bold;
     }
 
 }
@@ -267,32 +307,32 @@ h3{
 
 
         &--sL3{
-            background-image: $card-gradient ,url('../img/syriusz_l3_zl.png');
+            background-image:  url('../img/syriusz_l3_zl.png');
             .products__card-title{
                 background-image: url('../img/syriusz_l3-zl\ zew.png')
             }
         }
         &--sP3zL{
-            background-image: $card-gradient ,url('../img/syriusz_p3_zl.png');
+            background-image: url('../img/syriusz_p3_zl.png');
             .products__card-title{
                 background-image: url('../img/syriusz-p3\ zew.png')
             }
         }
         &--sL3zLK{
-            background-image: $card-gradient ,url('../img/syriusz_l3_kokos.png');
+            background-image: url('../img/syriusz_l3_kokos.png');
             .products__card-title{
                 background-image: url('../img/syriusz_l3-zl-kokos\ zew.png')
             }
         }
         &--sP4zL{
             background-position-y: 20px;
-            background-image: $card-gradient ,url('../img/syriusz_p4_zl.png');
+            background-image: url('../img/syriusz_p4_zl.png');
             .products__card-title{
                 background-image: url('../img/syriusz_p4_lz\ zew.png')
             }
         }
         &--orion{
-            background-image: $card-gradient ,url('../img/Orionhrzl.png');
+            background-image: url('../img/Orionhrzl.png');
             .products__card-title{
                 background-image: url('../img/orion_zewnatrz.png')
             }
@@ -392,10 +432,12 @@ h3{
         }
 
         &-price{
-            font-size: 1.4rem;
+            color:white;
+            font-size: 1.6rem;
             width: 100%;
             font-weight: bold;
             border-collapse: collapse;
+            background: $card-gradient;
             
             td{
                 border: 1px solid white;

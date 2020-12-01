@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .burger-btn {
@@ -134,12 +135,13 @@ body {
 .heroimg {
   position: relative;
   height: 95vh;
-  width: 100vw;
+  width: 100%;
   background-image: url("../img/sleep-large.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .heroimg::after {
@@ -181,15 +183,55 @@ body {
 }
 
 .heroimg__logo {
-  height: 40px;
-  width: 100px;
-  background-color: #333;
+  position: relative;
+  perspective: 800px;
+  width: 300px;
+  height: 200px;
   margin-bottom: 20px;
+}
+
+.heroimg__logo:hover .heroimg__logo-back {
+  transform: rotate(0);
+  opacity: 1;
+}
+
+.heroimg__logo:hover .heroimg__logo-front {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+.heroimg__logo-front, .heroimg__logo-back {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.heroimg__logo-front {
+  background-image: url("../img/logo_front.png");
+  transition: .8s;
+}
+
+.heroimg__logo-back {
+  background-image: url("../img/logo_back.png");
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: .8s;
 }
 
 .heroimg__title {
   text-transform: uppercase;
   margin-bottom: 5px;
+}
+
+.heroimg__p {
+  font-size: 1.6rem;
+  text-shadow: 2px 2px black;
+  font-weight: bold;
 }
 
 h3 {
@@ -245,7 +287,7 @@ h3::after {
 }
 
 .products__card--sL3 {
-  background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_l3_zl.png");
+  background-image: url("../img/syriusz_l3_zl.png");
 }
 
 .products__card--sL3 .products__card-title {
@@ -253,7 +295,7 @@ h3::after {
 }
 
 .products__card--sP3zL {
-  background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_p3_zl.png");
+  background-image: url("../img/syriusz_p3_zl.png");
 }
 
 .products__card--sP3zL .products__card-title {
@@ -261,7 +303,7 @@ h3::after {
 }
 
 .products__card--sL3zLK {
-  background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_l3_kokos.png");
+  background-image: url("../img/syriusz_l3_kokos.png");
 }
 
 .products__card--sL3zLK .products__card-title {
@@ -270,7 +312,7 @@ h3::after {
 
 .products__card--sP4zL {
   background-position-y: 20px;
-  background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/syriusz_p4_zl.png");
+  background-image: url("../img/syriusz_p4_zl.png");
 }
 
 .products__card--sP4zL .products__card-title {
@@ -278,7 +320,7 @@ h3::after {
 }
 
 .products__card--orion {
-  background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/Orionhrzl.png");
+  background-image: url("../img/Orionhrzl.png");
 }
 
 .products__card--orion .products__card-title {
@@ -389,10 +431,12 @@ h3::after {
 }
 
 .products__card-price {
-  font-size: 1.4rem;
+  color: white;
+  font-size: 1.6rem;
   width: 100%;
   font-weight: bold;
   border-collapse: collapse;
+  background: linear-gradient(45deg, #3333338e, #33333379);
 }
 
 .products__card-price td {
