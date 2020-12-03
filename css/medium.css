@@ -5,4 +5,12 @@
 .products__card-downSection {
   width: 80%;
 }
+
+@media only screen and (min-width: 900px) {
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 /*# sourceMappingURL=medium.css.map */

@@ -237,17 +237,41 @@ body {
 
     }
     &__title{
-        text-transform: uppercase;
         margin-bottom: 5px;
     }
     &__p{
-        font-size: 1.6rem;
-        text-shadow: 2px 2px black;
+        font-size: 2rem;
+        text-shadow: 2px 2px  black;
         font-weight: bold;
     }
 
 }
 //Main
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    &__item{
+        margin-top: 3em;
+        padding: 19px;
+    }
+    &__icon{
+        margin-bottom: 10px;
+        font-size: 8rem;
+        color: $main-color;
+        text-shadow: 2px 2px black;
+    }
+    &__title{
+        margin-top: 15px;
+        font-size: 3rem;
+    }
+    &__text{
+        margin-top: 1em;
+        font-size: 1.5rem;
+    }
+}
 
 h3{
     z-index: 0;

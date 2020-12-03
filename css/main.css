@@ -224,14 +224,42 @@ body {
 }
 
 .heroimg__title {
-  text-transform: uppercase;
   margin-bottom: 5px;
 }
 
 .heroimg__p {
-  font-size: 1.6rem;
-  text-shadow: 2px 2px black;
+  font-size: 2rem;
+  text-shadow: 2px 2px  black;
   font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.icons__item {
+  margin-top: 3em;
+  padding: 19px;
+}
+
+.icons__icon {
+  margin-bottom: 10px;
+  font-size: 8rem;
+  color: #fac402;
+  text-shadow: 2px 2px black;
+}
+
+.icons__title {
+  margin-top: 15px;
+  font-size: 3rem;
+}
+
+.icons__text {
+  margin-top: 1em;
+  font-size: 1.5rem;
 }
 
 h3 {
