@@ -96,21 +96,29 @@ body {
 .nav {
     z-index: 100;
     position: fixed;
-    left: 150%;
+    right: -150%;
     width: 100vw;
     height: 100vh;
-    transition: left .4s;
-    background-image:url('../img/pillows.png');
-    background-size: cover;
-    background-position-x: 20%;
-
+    transition: right .4s;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: $card-gradient, url('../img/pillows.png');
+        background-size: cover;
+        background-position-x: 20%;
+        opacity: 1;
+    }
+    
     &__items {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100%;
-        background-color: #fff;
     }
 
     &__item {
@@ -141,7 +149,7 @@ body {
 }
 
 .show-menu {
-    left: 0;
+    right: 0;
 }
 
 
@@ -318,7 +326,6 @@ h3{
         position: relative;
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
         align-items: center;
         min-height: 550px;
         background-size: cover;
@@ -390,6 +397,9 @@ h3{
             .products__card-title{
                 height: 0;
             }
+            .products__card-info{
+                width: 100%;
+            }
             .products__card-info-item{    
                     position: relative;
                     top: 1000px;
@@ -417,6 +427,9 @@ h3{
                 }
             
             }
+            .products__card-price{
+                transform: scale(.95);
+            }
         }
         
         &-title{
@@ -439,19 +452,27 @@ h3{
         }
         &-info{
             position: absolute;
-            top: 40%;
-            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px;
+            top: 20%;
+            transform: translateY(-20%);
             opacity: 0;
             padding: 0 10px;
             overflow: hidden;
             list-style: none;
-            text-align: left;
-            background-color: #3333334d;
+            background-color: #33333370;
             width: 100%;
             &-item{
                 margin: 4px auto;
+                padding: 2px 4px;
                 font-size: 1.3rem;
                 font-weight: 300;
+                width: 100%;
+                
+                border-bottom: 1px solid $main-color;
             }
         }
 
@@ -470,6 +491,7 @@ h3{
             }
         }
         &-downSection{
+            width: 100%;
             margin: 0 auto;
             position: absolute;
             bottom: 5%;

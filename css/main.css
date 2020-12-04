@@ -85,13 +85,23 @@ body {
 .nav {
   z-index: 100;
   position: fixed;
-  left: 150%;
+  right: -150%;
   width: 100vw;
   height: 100vh;
-  transition: left .4s;
-  background-image: url("../img/pillows.png");
+  transition: right .4s;
+}
+
+.nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, #3333338e, #33333379), url("../img/pillows.png");
   background-size: cover;
   background-position-x: 20%;
+  opacity: 1;
 }
 
 .nav__items {
@@ -100,7 +110,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-color: #fff;
 }
 
 .nav__item {
@@ -129,7 +138,7 @@ body {
 }
 
 .show-menu {
-  left: 0;
+  right: 0;
 }
 
 .heroimg {
@@ -387,6 +396,10 @@ h3::after {
   height: 0;
 }
 
+.products__card:hover .products__card-info {
+  width: 100%;
+}
+
 .products__card:hover .products__card-info-item {
   position: relative;
   top: 1000px;
@@ -420,6 +433,10 @@ h3::after {
   animation: itemShow .8s forwards;
 }
 
+.products__card:hover .products__card-price {
+  transform: scale(0.95);
+}
+
 .products__card-title {
   font-size: 2.4rem;
   position: absolute;
@@ -441,21 +458,28 @@ h3::after {
 
 .products__card-info {
   position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  top: 20%;
+  transform: translateY(-20%);
   opacity: 0;
   padding: 0 10px;
   overflow: hidden;
   list-style: none;
-  text-align: left;
-  background-color: #3333334d;
+  background-color: #33333370;
   width: 100%;
 }
 
 .products__card-info-item {
   margin: 4px auto;
+  padding: 2px 4px;
   font-size: 1.3rem;
   font-weight: 300;
+  width: 100%;
+  border-bottom: 1px solid #fac402;
 }
 
 .products__card-price {
@@ -474,6 +498,7 @@ h3::after {
 }
 
 .products__card-downSection {
+  width: 100%;
   margin: 0 auto;
   position: absolute;
   bottom: 5%;

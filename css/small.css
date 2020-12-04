@@ -1,8 +1,9 @@
-.heroimg__title {
-  font-size: 3.4rem;
+.products__card-downSection {
+  width: 80%;
 }
 
-.heroimg__p {
-  font-size: 1.8rem;
+.products__card-info-item {
+  padding: 2px 6px;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=small.css.map */

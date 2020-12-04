@@ -1,6 +1,7 @@
 const burgerBtn = document.querySelector('.burger-btn')
 const menu = document.querySelector('.nav')
 
+//Wysywanie menu
 burgerBtn.addEventListener('click', ()=>menu.classList.toggle('show-menu'))
 
 
@@ -29,7 +30,7 @@ window.addEventListener('resize', ()=>{
     }
 })
 
-if(window.innerWidth >= 900){
+if(window.innerWidth >= 961){
     console.log(window.innerWidth)
     for (const el of tel) {
         console.log(el.innerHTML)

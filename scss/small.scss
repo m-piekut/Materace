@@ -1,10 +1,15 @@
 //576px
-.heroimg {
+.products{
+    &__card{
 
-    &__title{
-        font-size: 3.4rem;
-    }
-    &__p{
-        font-size: 1.8rem;
+        &-downSection{
+            width: 80%;
+        }
+        &-info{
+            &-item{
+                padding: 2px 6px;
+                font-size: 1.4rem;
+            }
+        }
     }
 }
