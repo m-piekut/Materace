@@ -56,8 +56,7 @@ body {
         align-items: flex-start;
 
         &:hover {
-
-            .burger-btn__bars,
+            .burger-btn__bars::before,
             .burger-btn__bars::after {
                 width: 100%;
             }

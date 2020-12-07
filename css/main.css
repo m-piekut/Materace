@@ -50,7 +50,7 @@ body {
   align-items: flex-start;
 }
 
-.burger-btn__box:hover .burger-btn__bars,
+.burger-btn__box:hover .burger-btn__bars::before,
 .burger-btn__box:hover .burger-btn__bars::after {
   width: 100%;
 }
