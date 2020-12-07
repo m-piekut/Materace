@@ -212,16 +212,16 @@ body {
         height: 200px;
         margin-bottom: 20px;
 
-        &:hover{
-            .heroimg__logo-back{
-                transform: rotate(0);
-                opacity: 1;
-            }
-            .heroimg__logo-front{
-                transform: rotateY(-180deg);
-                opacity: 0;
-            }
-        }
+        // &:hover{
+        //     .heroimg__logo-back{
+        //         transform: rotate(0);
+        //         opacity: 1;
+        //     }
+        //     .heroimg__logo-front{
+        //         transform: rotateY(-180deg);
+        //         opacity: 0;
+        //     }
+        // }
         &-front, &-back{
             top: 0;
             left: 0;
@@ -253,6 +253,15 @@ body {
         font-weight: bold;
     }
 
+}
+
+.logoAnimationF{
+    transform: rotateY(-180deg);
+    opacity: 0;
+}
+.logoAnimationB{
+    transform: rotate(0);
+    opacity: 1;
 }
 //Main
 
@@ -597,6 +606,30 @@ h3{
 .hide-img{
     display: none;
 }
+
+
+
+//Mapa
+.marker {
+    background-image: url('../img/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
 
 //ANIMACJE
 

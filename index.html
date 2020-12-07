@@ -12,6 +12,8 @@
     <script src="https://kit.fontawesome.com/fe2234a45c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300;700&display=swap" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -39,7 +41,7 @@
                     <div class="heroimg__logo-back"></div>
                 </div>
                 <!-- <h1 class="heroimg__title">ESTE</h1> -->
-                <p class="heroimg__p">Materace dopasowane do Twoich potrzeb.</p>
+                <p class="heroimg__p">Materace dopasowane do Twoich potrzeb</p>
             </div>
         </div>
         </div>
@@ -311,16 +313,23 @@
                         class="infos__ipt">cena</span> podawana jest przy zamówieniu.</p>
             </div>
 
-            <div class="infos_item-delivery">
+            <!-- <div class="infos_item-delivery">
                 <div class="test"></div>
                 <p class="infos__p">Dostawy są wykonywane w promieniu <span class="infos__ipt">60 km</span> od Zarzecza.
                     W promieniu <span class="infos__ipt">20 km</span> dostawa jest <span
                         class="infos__ipt">darmowa,</span> w innym przypadku naliczana jest opłata wysokości <span
                         class="infos__ipt">1,80 zł/km</span> za każdy dodatkowy kilometr <span class="infos__ipt">tylko
                         w stronę klienta</span></p>
-            </div>
+            </div> -->
         </div>
     </main>
+
+    <div class="section">
+
+        <div id='map' style='width: 100%; height: 300px;'></div>
+    </div>
+
+
     <footer class="footer section">
         <div class="footer__item footer__item--contact">
             <p> telefon: 728 823 920</p>
