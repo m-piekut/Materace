@@ -56,7 +56,7 @@ body {
 }
 
 .burger-btn__bars {
-  top: 0;
+  text-align: right;
   width: 70%;
   height: 3px;
   background-color: #fac402;
