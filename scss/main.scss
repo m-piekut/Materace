@@ -600,13 +600,23 @@ h3{
     &__item{
         position: relative;
         z-index: 10;
-
+        color: black;
+        &--contact{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
         &--me{
             margin-top: 5px;
             font-size: 1rem;
         }
     }
     
+}
+
+a.footer__item{
+    text-decoration: underline $main-color;
+    cursor: pointer;
 }
 
 .hide-img{

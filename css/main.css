@@ -600,11 +600,23 @@ h3::after {
 .footer__item {
   position: relative;
   z-index: 10;
+  color: black;
+}
+
+.footer__item--contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .footer__item--me {
   margin-top: 5px;
   font-size: 1rem;
+}
+
+a.footer__item {
+  text-decoration: underline #fac402;
+  cursor: pointer;
 }
 
 .hide-img {
