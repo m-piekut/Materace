@@ -28,7 +28,7 @@ window.addEventListener('resize', () => {
         for (const el of tel) {
             const changeTonuber = (e) => {
                 e.preventDefault()
-                el.outerHTML = '<p class="products__card-buy products__card-buy--phone">728 823 920</p>'
+                el.outerHTML = '<p class="products__card-buy products__card-buy--phone">+48 728 823 920</p>'
             }
             el.addEventListener('click', changeTonuber)
         }
@@ -45,7 +45,7 @@ if (window.innerWidth >= 961) {
     for (const el of tel) {
         const changeTonuber = (e) => {
             e.preventDefault()
-            el.outerHTML = '<p class="products__card-buy products__card-buy--phone">728 823 920</p>'
+            el.outerHTML = '<p class="products__card-buy products__card-buy--phone">+ 48 728 823 920</p>'
         }
         el.addEventListener('click', changeTonuber)
     }
