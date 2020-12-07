@@ -1,9 +1,16 @@
 const burgerBtn = document.querySelector('.burger-btn');
 const menu = document.querySelector('.nav');
 
-//Wysywanie menu
+//Wysuwanie menu
 burgerBtn.addEventListener('click', () => menu.classList.toggle('show-menu'));
 let tel = document.getElementsByClassName('products__card-buy--phone');
+
+//Chowanie menu po kliku
+const listItems = document.querySelectorAll('.nav__item');
+listItems.forEach(e => {
+    e.addEventListener('click', ()=> menu.classList.remove('show-menu'))
+})
+
 
 //odwaracanie loga
 
@@ -18,9 +25,7 @@ setInterval(() => {
 
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 900) {
-        console.log(window.innerWidth)
         for (const el of tel) {
-            console.log(el.innerHTML)
             const changeTonuber = (e) => {
                 e.preventDefault()
                 el.outerHTML = '<p class="products__card-buy products__card-buy--phone">728 823 920</p>'
@@ -29,7 +34,6 @@ window.addEventListener('resize', () => {
         }
 
     } else {
-        console.log(tel)
         for (const el of tel) {
             el.outerHTML = '<a class="products__card-buy products__card-buy--phone" href="tel:728 823 920">zamów przez telefon</a>'
         }
@@ -38,9 +42,7 @@ window.addEventListener('resize', () => {
 })
 
 if (window.innerWidth >= 961) {
-    console.log(window.innerWidth)
     for (const el of tel) {
-        console.log(el.innerHTML)
         const changeTonuber = (e) => {
             e.preventDefault()
             el.outerHTML = '<p class="products__card-buy products__card-buy--phone">728 823 920</p>'
@@ -49,8 +51,16 @@ if (window.innerWidth >= 961) {
     }
 }
 
-//MAOS
 
+
+
+
+
+
+
+
+
+//MAPS
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibS1waWVrdXQiLCJhIjoiY2tpZWdjeHB5MTNrMjJ4cGVtOHN2dzl0YSJ9.9KXXsvqp4cMnWekbtL3tJA';
 const map = new mapboxgl.Map({

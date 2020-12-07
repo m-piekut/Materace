@@ -233,11 +233,11 @@ body {
             background-position: center;
         }
         &-front{
-            background-image: url('../img/logo_front.png');
+            background-image: url('../img/logo_front2.png');
             transition: .8s;
         }
         &-back{
-            background-image: url('../img/logo_back.png');
+            background-image: url('../img/logo_back2.png');
             opacity: 0;
             transform: rotateY(180deg);
             transition:  .8s
@@ -600,7 +600,13 @@ h3{
     &__item{
         position: relative;
         z-index: 10;
+
+        &--me{
+            margin-top: 5px;
+            font-size: 1rem;
+        }
     }
+    
 }
 
 .hide-img{
