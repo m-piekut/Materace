@@ -7,15 +7,18 @@
     width: 500px;
     height: 100vh;
     transition: right .4s;
-    
-
     }
-
 .show-menu {
     right: 0;
 }
 h3{
     margin-bottom: 30px;
+}
+
+
+.heroimg {
+    background-image: url('../img/sleep-large.jpg');
+
 }
 .products{
     &__cards{
