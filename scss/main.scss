@@ -64,7 +64,6 @@ body {
     }
 
     &__bars {
-        text-align: right;
         width: 100%;
         height: 3px;
         background-color: $main-color;
@@ -397,48 +396,7 @@ h3{
             top: -2px;
             left: 100%;
         }
-        &:hover{
-            transform: scale(1.05);
-            .products__card-info{
-                opacity: 1;
-            }
-            .products__card-title{
-                height: 0;
-            }
-            .products__card-info{
-                width: 100%;
-            }
-            .products__card-info-item{    
-                    position: relative;
-                    top: 1000px;
-                
-                &:nth-of-type(1){
-                    animation: itemShow .2s forwards;
-                }
-                &:nth-of-type(2){
-                    animation: itemShow .3s forwards;
-                }
-                &:nth-of-type(3){
-                    animation: itemShow .4s forwards ;
-                }
-                &:nth-of-type(4){
-                    animation: itemShow .5s forwards;
-                }
-                &:nth-of-type(5){
-                    animation: itemShow .6s forwards;
-                }
-                &:nth-of-type(6){
-                    animation: itemShow .7s forwards;
-                }
-                &:nth-of-type(7){
-                    animation: itemShow .8s forwards;
-                }
-            
-            }
-            .products__card-price{
-                transform: scale(.95);
-            }
-        }
+        
         
         &-title{
             font-size: 2.4rem;
@@ -450,13 +408,21 @@ h3{
             transition: height .3s;
 
         }
-        &-arrow{
+        &-questionMark{
             position: relative;
-            top: -20px;
+            left: 40%;
+            padding: 5px 10px;
+            border-radius: 50%;
+            border: 1px solid $main-color;
+            background-color: transparent;
             color: white;
             font-weight: 700;
-            font-size: 2em;
-            animation: arrowbounce infinite .4s alternate;
+            font-size: 2rem;
+            transition: background .3s, color .3s;
+            &:hover{
+                color:$main-color;
+                background-color: white;
+            }
         }
         &-info{
             position: absolute;
@@ -529,6 +495,50 @@ h3{
                 color:$main-color;
                 background-color: white;
             }
+        }
+        &--active{
+            
+                transform: scale(1.05);
+                .products__card-info{
+                    opacity: 1;
+                }
+                .products__card-title{
+                    height: 0;
+                }
+                .products__card-info{
+                    width: 100%;
+                }
+                .products__card-info-item{    
+                        position: relative;
+                        top: 1000px;
+                    
+                    &:nth-of-type(1){
+                        animation: itemShow .2s forwards;
+                    }
+                    &:nth-of-type(2){
+                        animation: itemShow .3s forwards;
+                    }
+                    &:nth-of-type(3){
+                        animation: itemShow .4s forwards ;
+                    }
+                    &:nth-of-type(4){
+                        animation: itemShow .5s forwards;
+                    }
+                    &:nth-of-type(5){
+                        animation: itemShow .6s forwards;
+                    }
+                    &:nth-of-type(6){
+                        animation: itemShow .7s forwards;
+                    }
+                    &:nth-of-type(7){
+                        animation: itemShow .8s forwards;
+                    }
+                
+                }
+                .products__card-price{
+                    transform: scale(.95);
+                }
+            
         }
     }
 }

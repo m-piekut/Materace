@@ -23,6 +23,25 @@ setInterval(() => {
 }, 5000);
 
 
+
+//wysuwane informacje  w kartach.
+
+const questionMarkList = document.querySelectorAll('.products__card-questionMark');
+questionMarkList.forEach(el =>{
+    // console.log(el.parentElement.parentElement)
+    el.addEventListener('click', ()=>{
+        el.parentElement.parentElement.classList.toggle('products__card--active');
+        el.classList.toggle('qactive');
+        if(el.classList.contains('qactive')){
+            el.innerHTML = '<i class="fas fa-times"></i>'
+        }else{
+            el.innerHTML = '<i class="fas fa-question">'
+        }
+    })
+})
+
+
+
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 900) {
         for (const el of tel) {

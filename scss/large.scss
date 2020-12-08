@@ -35,6 +35,54 @@ h3{
                 font-size: 1.4rem;
             }
         }
+        &-questionMark{
+            display: none;
+            color: red;
+        }
+        &:hover{
+            transform: scale(1.05);
+                .products__card-info{
+                    opacity: 1;
+                }
+                .products__card-title{
+                    height: 0;
+                }
+                .products__card-info{
+                    width: 100%;
+                }
+                .products__card-info-item{    
+                        position: relative;
+                        top: 1000px;
+                    
+                    &:nth-of-type(1){
+                        animation: itemShow .2s forwards;
+                    }
+                    &:nth-of-type(2){
+                        animation: itemShow .3s forwards;
+                    }
+                    &:nth-of-type(3){
+                        animation: itemShow .4s forwards ;
+                    }
+                    &:nth-of-type(4){
+                        animation: itemShow .5s forwards;
+                    }
+                    &:nth-of-type(5){
+                        animation: itemShow .6s forwards;
+                    }
+                    &:nth-of-type(6){
+                        animation: itemShow .7s forwards;
+                    }
+                    &:nth-of-type(7){
+                        animation: itemShow .8s forwards;
+                    }
+                
+                }
+                .products__card-price{
+                    transform: scale(.95);
+                }
+                
+            
+        }
         
     }
 }

@@ -56,7 +56,6 @@ body {
 }
 
 .burger-btn__bars {
-  text-align: right;
   width: 100%;
   height: 3px;
   background-color: #fac402;
@@ -384,59 +383,6 @@ h3::after {
   left: 100%;
 }
 
-.products__card:hover {
-  transform: scale(1.05);
-}
-
-.products__card:hover .products__card-info {
-  opacity: 1;
-}
-
-.products__card:hover .products__card-title {
-  height: 0;
-}
-
-.products__card:hover .products__card-info {
-  width: 100%;
-}
-
-.products__card:hover .products__card-info-item {
-  position: relative;
-  top: 1000px;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(1) {
-  animation: itemShow .2s forwards;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(2) {
-  animation: itemShow .3s forwards;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(3) {
-  animation: itemShow .4s forwards;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(4) {
-  animation: itemShow .5s forwards;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(5) {
-  animation: itemShow .6s forwards;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(6) {
-  animation: itemShow .7s forwards;
-}
-
-.products__card:hover .products__card-info-item:nth-of-type(7) {
-  animation: itemShow .8s forwards;
-}
-
-.products__card:hover .products__card-price {
-  transform: scale(0.95);
-}
-
 .products__card-title {
   font-size: 2.4rem;
   position: absolute;
@@ -447,13 +393,22 @@ h3::after {
   transition: height .3s;
 }
 
-.products__card-arrow {
+.products__card-questionMark {
   position: relative;
-  top: -20px;
+  left: 40%;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 1px solid #fac402;
+  background-color: transparent;
   color: white;
   font-weight: 700;
-  font-size: 2em;
-  animation: arrowbounce infinite .4s alternate;
+  font-size: 2rem;
+  transition: background .3s, color .3s;
+}
+
+.products__card-questionMark:hover {
+  color: #fac402;
+  background-color: white;
 }
 
 .products__card-info {
@@ -530,6 +485,59 @@ h3::after {
 .products__card-buy:hover {
   color: #fac402;
   background-color: white;
+}
+
+.products__card--active {
+  transform: scale(1.05);
+}
+
+.products__card--active .products__card-info {
+  opacity: 1;
+}
+
+.products__card--active .products__card-title {
+  height: 0;
+}
+
+.products__card--active .products__card-info {
+  width: 100%;
+}
+
+.products__card--active .products__card-info-item {
+  position: relative;
+  top: 1000px;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(1) {
+  animation: itemShow .2s forwards;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(2) {
+  animation: itemShow .3s forwards;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(3) {
+  animation: itemShow .4s forwards;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(4) {
+  animation: itemShow .5s forwards;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(5) {
+  animation: itemShow .6s forwards;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(6) {
+  animation: itemShow .7s forwards;
+}
+
+.products__card--active .products__card-info-item:nth-of-type(7) {
+  animation: itemShow .8s forwards;
+}
+
+.products__card--active .products__card-price {
+  transform: scale(0.95);
 }
 
 .infos {
