@@ -1,7 +1,10 @@
 //576px
 .products{
     &__card{
-
+        &-title{
+            font-size: 2.6rem;
+            // padding-left: 1em;
+        }
         &-downSection{
             width: 80%;
         }

@@ -1,3 +1,7 @@
+.products__card-title {
+  font-size: 2.6rem;
+}
+
 .products__card-downSection {
   width: 80%;
 }

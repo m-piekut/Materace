@@ -347,33 +347,33 @@ h3{
         &--sL3{
             background-image:  url('../img/syriusz_l3_zl.png');
             .products__card-title{
-                background-image: url('../img/syriusz_l3-zl\ zew.png')
+                background-image: url('../img/materac-outside.png')
             }
         }
         &--sP3zL{
             background-image: url('../img/syriusz_p3_zl.png');
-            .products__card-title{
-                background-image: url('../img/syriusz-p3\ zew.png')
-            }
+            // .products__card-title{
+            //     background-image: url('../img/syriusz-p3\ zew.png')
+            // }
         }
         &--sL3zLK{
             background-image: url('../img/syriusz_l3_kokos.png');
-            .products__card-title{
-                background-image: url('../img/syriusz_l3-zl-kokos\ zew.png')
-            }
+            // .products__card-title{
+            //     background-image: url('../img/syriusz_l3-zl-kokos\ zew.png')
+            // }
         }
         &--sP4zL{
-            background-position-y: 20px;
+            // background-position-y: 20px;
             background-image: url('../img/syriusz_p4_zl.png');
-            .products__card-title{
-                background-image: url('../img/syriusz_p4_lz\ zew.png')
-            }
+            // .products__card-title{
+            //     background-image: url('../img/syriusz_p4_lz\ zew.png')
+            // }
         }
         &--orion{
             background-image: url('../img/Orionhrzl.png');
-            .products__card-title{
-                background-image: url('../img/orion_zewnatrz.png')
-            }
+            // .products__card-title{
+            //     background-image: url('../img/orion_zewnatrz.png')
+            // }
         }
         
         &::after, &::before{
@@ -399,13 +399,18 @@ h3{
         
         
         &-title{
-            font-size: 2.4rem;
             position: absolute;
             width: 100%;
             height: 50%;
             background-size: 100% 100%;
             background-position: bottom left;
-            transition: height .3s;
+            color: black;
+            font-size: 2rem;
+            font-weight: bold;
+            background-image: url('../img/materac-outside.png');
+            text-shadow: 0 0 3px transparent;
+            transition: height .3s, color .3s;
+            
 
         }
         &-questionMark{
@@ -431,7 +436,7 @@ h3{
             justify-content: center;
             align-items: center;
             margin: 0 15px;
-            top: 20%;
+            top: 25%;
             transform: translateY(-20%);
             opacity: 0;
             padding: 0 10px;
@@ -503,6 +508,8 @@ h3{
                     opacity: 1;
                 }
                 .products__card-title{
+                    text-shadow: 0 0 3px black;
+                    color: $main-color;
                     height: 0;
                 }
                 .products__card-info{
