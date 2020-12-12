@@ -343,7 +343,7 @@ h3::after {
 }
 
 .products__card--orion {
-  background-image: url("../img/Orionhrzl.png");
+  background-image: url("../img/orionhrzl.png");
 }
 
 .products__card::after, .products__card::before {
