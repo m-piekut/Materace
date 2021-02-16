@@ -76,42 +76,42 @@ Resize()
 
 //MAPS
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibS1waWVrdXQiLCJhIjoiY2tpZWdjeHB5MTNrMjJ4cGVtOHN2dzl0YSJ9.9KXXsvqp4cMnWekbtL3tJA';
-const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [22.21375828671849, 50.51511182355613],
-    zoom: 13
-});
+// mapboxgl.accessToken = 'pk.eyJ1IjoibS1waWVrdXQiLCJhIjoiY2tpZWdjeHB5MTNrMjJ4cGVtOHN2dzl0YSJ9.9KXXsvqp4cMnWekbtL3tJA';
+// const map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/mapbox/streets-v11',
+//     center: [22.21375828671849, 50.51511182355613],
+//     zoom: 13
+// });
 
-var geojson = {
-    type: 'FeatureCollection',
-    features: [{
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [22.21375828671849, 50.51511182355613]
-        },
-        properties: {
-            title: 'Este',
-            description: 'Zarzecze, Ul. Bukowina 10 B'
-        }
-    }]
-};
+// var geojson = {
+//     type: 'FeatureCollection',
+//     features: [{
+//         type: 'Feature',
+//         geometry: {
+//             type: 'Point',
+//             coordinates: [22.21375828671849, 50.51511182355613]
+//         },
+//         properties: {
+//             title: 'Este',
+//             description: 'Zarzecze, Ul. Bukowina 10 B'
+//         }
+//     }]
+// };
 
-// add markers to map
-geojson.features.forEach(function (marker) {
+// // add markers to map
+// geojson.features.forEach(function (marker) {
 
-    // create a HTML element for each feature
-    var el = document.createElement('div');
-    el.className = 'marker';
+//     // create a HTML element for each feature
+//     var el = document.createElement('div');
+//     el.className = 'marker';
 
-    // make a marker for each feature and add to the map
-    new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({
-                offset: 25
-            }) // add popups
-            .setHTML('<h4>' + marker.properties.title + '</h4><p>' + marker.properties.description + '</p>'))
-        .addTo(map);
-});
+//     // make a marker for each feature and add to the map
+//     new mapboxgl.Marker(el)
+//         .setLngLat(marker.geometry.coordinates)
+//         .setPopup(new mapboxgl.Popup({
+//                 offset: 25
+//             }) // add popups
+//             .setHTML('<h4>' + marker.properties.title + '</h4><p>' + marker.properties.description + '</p>'))
+//         .addTo(map);
+// });

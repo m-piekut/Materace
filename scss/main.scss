@@ -221,6 +221,8 @@ body {
         //     }
         // }
         &-front, &-back{
+            height: 100%;
+            width: 100%;
             top: 0;
             left: 0;
             right: 0;
@@ -288,7 +290,7 @@ body {
     }
 }
 
-h3{
+h2{
     z-index: 0;
     position: relative;
     font-size: 4rem;
