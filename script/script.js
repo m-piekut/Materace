@@ -1,4 +1,4 @@
-document.addEventListener('DONConentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function(){
 
     const burgerBtn = document.querySelector('.burger-btn');
     const menu = document.querySelector('.nav');
